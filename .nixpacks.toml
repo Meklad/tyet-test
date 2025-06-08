@@ -1,0 +1,9 @@
+
+[phases.setup]
+nixPkgs = ["php", "php81Packages.composer", "php81Packages.php-fpm", "nginx"]
+
+[phases.install]
+cmds = []
+
+[phases.start]
+cmd = "php-fpm -D && nginx -c $PWD/nginx.conf"
